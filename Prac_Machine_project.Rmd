@@ -5,9 +5,11 @@ date: "24 de noviembre de 2017"
 output: html_document
 ---
 ##Overview
+
  At this project, we have to build a predictor and we are going to use the data from the source:http://groupware.les.inf.puc-rio.br/har. This is a recolection of data from accelerometers of 6 participants, performing barbell lifts correctly and incorrectly. Our job will be to build a predictor who can predict how is the activity done.
  
 ##Loading Data
+
   The first thing, is to load the data. For our goal, we need the variable "classe", which is in the trainig set. 
 ```{r, echo=TRUE}
 url_training<-"https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv"
@@ -63,7 +65,7 @@ print(train_rd)
 ```{r,echo=TRUE}
 train_rd$finalModel
 ```
-The error rate is less than 1%, what it´s great and something to expect from a random Forest procedure. So,this method will be applied to our test set and see what result we get.
+The error rate is less than 1%, what itÂ´s great and something to expect from a random Forest procedure. So,this method will be applied to our test set and see what result we get.
 
 ```{r, echo=TRUE}
 test3<-predict(train_rd,newdata = testing)
